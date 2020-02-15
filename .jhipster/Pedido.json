@@ -1,0 +1,31 @@
+{
+    "name": "Pedido",
+    "fields": [
+        {
+            "fieldName": "dataPedido",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "valorPedido",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "itemPedido",
+            "otherEntityRelationshipName": "pedido",
+            "relationshipName": "itempedido"
+        }
+    ],
+    "changelogDate": "20200215171700",
+    "entityTableName": "pedido",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

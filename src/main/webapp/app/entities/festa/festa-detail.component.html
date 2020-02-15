@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="festa">
+            <h2><span jhiTranslate="appApp.festa.detail.title">Festa</span> {{ festa.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="appApp.festa.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ festa.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="appApp.festa.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ festa.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="appApp.festa.tipoFesta">Tipo Festa</span></dt>
+                <dd>
+                    <div *ngIf="festa.tipoFestaId">
+                        <a [routerLink]="['/tipo-festa', festa.tipoFestaId, 'view']">{{ festa.tipoFestaNome }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/festa', festa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

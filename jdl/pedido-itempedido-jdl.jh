@@ -1,0 +1,27 @@
+entity Pedido {
+	dataPedido Instant,
+    valorPedido BigDecimal
+}
+
+entity ItemPedido {
+	nome String,
+    valorItem BigDecimal
+}
+
+relationship OneToMany {
+	Pedido{itempedido} to ItemPedido
+}
+
+// Set pagination options
+paginate Pedido with infinite-scroll
+paginate ItemPedido with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+service all with serviceImpl
+
+// Set an angular suffix
+//angularSuffix * with mySuffix

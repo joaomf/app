@@ -1,0 +1,31 @@
+{
+    "name": "Cargo",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salarioCargo",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "funcionario",
+            "otherEntityRelationshipName": "cargo",
+            "relationshipName": "funcionario"
+        }
+    ],
+    "changelogDate": "20200215183300",
+    "entityTableName": "cargo",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

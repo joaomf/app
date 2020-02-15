@@ -45,6 +45,17 @@ public class CacheConfiguration {
             createCache(cm, com.joao.app.domain.User.class.getName());
             createCache(cm, com.joao.app.domain.Authority.class.getName());
             createCache(cm, com.joao.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.joao.app.domain.Festa.class.getName());
+            createCache(cm, com.joao.app.domain.Cliente.class.getName());
+            createCache(cm, com.joao.app.domain.TipoFesta.class.getName());
+            createCache(cm, com.joao.app.domain.TipoFesta.class.getName() + ".festa_tipos");
+            createCache(cm, com.joao.app.domain.TipoFesta.class.getName() + ".as");
+            createCache(cm, com.joao.app.domain.Pedido.class.getName());
+            createCache(cm, com.joao.app.domain.Pedido.class.getName() + ".itempedidos");
+            createCache(cm, com.joao.app.domain.ItemPedido.class.getName());
+            createCache(cm, com.joao.app.domain.Funcionario.class.getName());
+            createCache(cm, com.joao.app.domain.Cargo.class.getName());
+            createCache(cm, com.joao.app.domain.Cargo.class.getName() + ".funcionarios");
             // jhipster-needle-ehcache-add-entry
         };
     }

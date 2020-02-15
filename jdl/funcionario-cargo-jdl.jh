@@ -1,0 +1,27 @@
+entity Funcionario {
+	nome String,
+    telefone String
+}
+
+entity Cargo {
+	nome String,
+    salarioCargo BigDecimal
+}
+
+relationship OneToMany {
+	Cargo{funcionario} to Funcionario
+}
+
+// Set pagination options
+paginate Cargo with infinite-scroll
+paginate Funcionario with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+service all with serviceImpl
+
+// Set an angular suffix
+//angularSuffix * with mySuffix

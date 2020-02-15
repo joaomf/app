@@ -1,0 +1,32 @@
+{
+    "name": "Funcionario",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cargo",
+            "otherEntityRelationshipName": "funcionario",
+            "relationshipName": "cargo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200215183200",
+    "entityTableName": "funcionario",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
